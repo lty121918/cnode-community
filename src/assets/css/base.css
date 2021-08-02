@@ -1,42 +1,17 @@
-@import "./normalize.css";
-
-:root {
-    --color-text: #666;
-    --color-high-text: #42bBaa;
-    --color-tint:#42b983;
-    --color-background:#FFFFFF;
-    --font-size:14px;
-    --line-height:1.5;
+/* @import "./normalize.css"; */
+*{
+    margin: 0;
+    padding: 0;
 }
-
-*,
-*::before,*::after {
-    margin:0;
-    padding:0;
-    box-sizing: border-box;
+html{
+    font-size: 100px;
 }
-
-body {
-    user-select:none; /*禁止用户选择中文件或图片*/;
-    background: var(--color-background);
-    color:var(--color-text);
-    width:100vw;
-}
-
-a {
-    color:var(--color-text);
+a{
     text-decoration: none;
+    /* 去掉a的下划线 */
 }
 
-.left {
-    float:left;
-}
-
-.right {
-    float:right;
-}
-
-img {
-    max-width: 100% !important;
-    height: auto !important;
+ul li{
+    list-style-type: none;
+    /* 去掉ul的小圆点 */
 }

@@ -1,9 +1,113 @@
+@media screen and (min-width:979px) {
+    // 1280<屏幕宽度<1500
+    html{
+        font-size: 100px;
+    }
+    .navbar{
+        background-color: red;
+    }
+}
+@media screen and (min-width:300px) and (max-width:979px) {
+    // min-width<屏幕宽度<max-width
+    .navbar{
+        background-color: blue;
+    }
+    .navbar-search{
+        float: left;
+        width: 100%;
+    }
+}
 .navbar{
-    margin-bottom: 0;
-    z-index: 9;
+    // background: #444;
+    font-size: 0.13rem;
     width: 100%;
-    position: relative;
-    background: #444;
-    font-size: 13px;
-    
+    .navbar-inner{
+        display: flex;
+        width: 90%;
+        padding: 0.05rem;
+        margin: auto;
+        align-items:center;
+        align-content: space-between;
+        .container{
+
+        .brand{  // 图标
+            float: left;
+            line-height: 0.34rem;
+            // width: 1.2rem;
+            width: 100%;
+            height: 0.34rem;
+            color: #ccc;
+            font-weight: 700;
+            img{
+                width: 1.2rem;
+                height: 0.34rem;
+               }
+           }
+           .navbar-search{//搜索框表单
+                float: left;
+                line-height: 0.21rem;
+                width: 100%;
+                // width: 2.4rem;
+                height: 0.36rem;
+                padding :3px 5px 3px 22px;
+                img{
+                    position: relative;
+                    left: -1.08rem;
+                    top: 0.09rem;
+                    z-index: 10;
+                }
+                .search-query{
+                    position: relative;
+                    line-height: 0.22rem;
+                    top: -0.21rem;
+                    left: -0.09rem;
+                    border: none;
+                    outline: none;
+                    height: 0.22rem;
+                    width: 1.88rem;
+                    border-radius: 0.13rem;
+                    font-size: 0.13rem;
+                    padding: 0.02rem 0.15rem;
+                    padding-left: 0.25rem;
+                    color: #666;
+                    background-color: #666;
+                    margin-top: 0.02rem;
+                    transition: all .5s;
+                    &:focus{
+                        background-color:#fff;
+                    }
+                    &:hover{
+                        background-color:#fff;
+                    }
+                    
+                }
+           }
+           .pull-right{  //右侧导航栏
+            width: 100%;
+            display: flex;
+            align-items: center;
+            align-content: space-between;
+            height: 0.2rem;
+            margin-left: 0.55rem;
+            flex-wrap: nowrap;  
+             li{
+                
+                 padding: 0.01rem 0.15rem;
+                 a{
+                     color: #ccc;
+                 }
+                 &:hover{
+                    a{
+                       color: #fff;
+                       transition: all .3s;
+                    }
+                   
+               }
+             }
+            
+
+
+           }
+        }
+    }
 }
