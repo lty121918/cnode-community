@@ -1,6 +1,5 @@
 <template>
   <div class="navbar">
-  <div class="navbar-inner">
     <!-- 内容 --start-->
     <div class="container">
       <!-- 图标 -->
@@ -26,7 +25,6 @@
       <!-- 右侧导航栏 -->
 
     </div>
-</div>
 <!-- 内容 --end-->
   </div>
 </template>
@@ -37,4 +35,6 @@ export default {
 
 }
 </script>
-<style lang="less" scoped src="./index.less"></style>
+<style lang="less" scoped>
+	@import "./index02.less";
+</style>

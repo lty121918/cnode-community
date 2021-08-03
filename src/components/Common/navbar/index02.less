@@ -1,0 +1,108 @@
+html{
+    font-size: 100px !important;
+}
+@media screen and (max-width:750px) { //屏幕最小小于750px时
+    html{
+        font-size: 200px !important;
+    }
+    .brand{
+        width: 100%;
+    }
+    .navbar-search{
+        width: 100%;
+    }
+    .pull-right{
+        width: 100%;
+    }
+}
+@media screen and (min-width:751px) and (max-width:980px) { //屏幕最大大小是980px时
+    html{
+        font-size: 100px !important;
+    }
+    .brand{
+        width: 50%;
+    }
+    .navbar-search{
+        width: 50%;
+    }
+    .pull-right{
+        width: 100%;
+    }
+}
+@media screen and (min-with:980px) { //屏幕最大，大于980px时
+    html{
+        font-size: 80px !important;
+    }
+    .brand{
+        width: 33.3%;
+    }
+    .navbar-search{
+        width: 33.3%;
+    }
+    .pull-right{
+        width: 33.3%;
+    }
+
+}
+
+
+.navbar{
+   width: 100%;
+   overflow: hidden;
+   background: #444;
+   .container{
+    width: 90%; 
+    margin: auto;
+    height: 50px;
+    padding: 0.05rem;
+        .brand{
+            display: block;
+            width: 100px;
+            float: left;
+            height: 34px;
+            margin: 0 auto;
+            img{
+                height: 1.8rem;
+                line-height: 0.4rem;
+            }
+        }
+        .navbar-search{
+            float: left;
+            height: 40px;
+            img{
+                position: relative;
+                left: 1px;
+                top: 1px;
+            }
+            .search-query{
+                position: relative;
+                border: none;
+                outline: none;
+                border-radius: 1.3rem;
+                transition: all .5s;
+                color: #666;
+                background-color: #666;
+                padding: 0.5rem 1.5rem;
+                padding-left: 2.5rem;
+                &:focus{
+                    background-color:#fff;
+                }
+                &:hover{
+                    background-color:#fff;
+                }
+            }
+
+        }
+        .pull-right{
+            float: right;
+            height: 40px;
+            background-color:blueviolet;
+            display: flex;
+            justify-content: space-between;
+
+        }
+
+
+   }
+
+}
