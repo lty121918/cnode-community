@@ -13,7 +13,6 @@
 <script>
 import navbar from '../../components/Common/navbar/index.vue'
 import amain from './amain/index.vue'
-import "../../assets/css/base.css"
 export default{
   components:{
       navbar,

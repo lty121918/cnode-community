@@ -18,7 +18,7 @@
         <li><a href="/">首页</a></li>
         <li><a href="/getstart">新手入门</a></li>
         <li><a href="/api">API</a></li>
-        <li><a href="/about" target="">关于</a></li>
+        <li><a href="/about">关于</a></li>
         <li><a href="/signup">注册</a></li>
         <li><a href="/signin">登录</a></li>  
       </ul>

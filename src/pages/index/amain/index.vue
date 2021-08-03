@@ -2,11 +2,13 @@
   <div id="main">
     <!-- 左边内容 -->
     <div class="content">
-      <!-- <aheader></aheader> -->
+      <aheader></aheader>
       <router-view></router-view> 
     </div>
     <!-- 侧边内容 -->
-    <!-- <asidebar></asidebar>    -->
+    <div class="content-sidebar">
+    <asidebar></asidebar>   
+    </div>
   </div>
 </template>
 

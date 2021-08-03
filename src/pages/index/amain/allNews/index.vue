@@ -1,18 +1,19 @@
 <template>
   <div class="allNews">
       <ul>
-          <li></li>
+          <li>{{titles}}</li>
+          <li>111111</li>
       </ul>
   </div>
 </template>
 
 <script>
-import {request} from '../../../network/request/request'
+import {request} from '../../../../network/request/request'
 export default {
 name: 'AllNews',
 data(){
     return{
-
+      titles:null
     }
 },
 mounted(){
@@ -20,7 +21,8 @@ mounted(){
   request({
          url:'topics',
         }).then(res=>{
-          console.log(res.data.data[0].title);  
+          console.log(res.data.data[0].title); 
+          this.titles=res.data.data[0].title
         }).catch(err=>{
           console.log(err); 
         });
