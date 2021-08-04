@@ -4,6 +4,7 @@
           <li>{{titles}}</li>
           <li>111111</li>
       </ul>
+      <div>这是全部信息</div>
   </div>
 </template>
 
