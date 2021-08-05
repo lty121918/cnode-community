@@ -5,7 +5,7 @@
     <!-- router-link定义页面中点击触发部分 -->
       <!-- <router-link to="/">Home</router-link>
       <router-link to="/about">About</router-link>  -->
-    <!-- <router-view></router-view> -->
+    <router-view></router-view>
     <!-- 定义页面中显示部分 -->
   </div>
 </template>

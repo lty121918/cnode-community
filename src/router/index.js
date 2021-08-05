@@ -15,20 +15,20 @@ const routes = [
   {
     path: '/',name: 'index',
     component: index,
-    children:[
-      {
-        path:'',
-        component:allNews
-      },
-      {
-        path:'share',
-        component:share
-      },
-      {
-        path:'good',
-        component:good
-      }
-    ]
+    // children:[
+    //   {
+    //     path:'',
+    //     component:allNews
+    //   },
+    //   {
+    //     path:'share',
+    //     component:share
+    //   },
+    //   {
+    //     path:'good',
+    //     component:good
+    //   }
+    // ]
   },
   // {path: '/about',name: 'About',component: () => import(/* webpackChunkName: "about" */ '../views/About.vue')},
   {path:'',redirect:"index"},//可以配置重定向

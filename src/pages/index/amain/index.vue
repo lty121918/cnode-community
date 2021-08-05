@@ -3,7 +3,8 @@
     <!-- 左边内容 -->
     <div class="content">
       <aheader></aheader>
-      <router-view></router-view> 
+      <!-- <router-view></router-view>  -->
+      <all-news></all-news>
     </div>
     <!-- 侧边内容 -->
     <div class="content-sidebar">
@@ -15,10 +16,12 @@
 <script>
 import aheader from "./header/index.vue"
 import asidebar from "../sidebar/index.vue"
+import allNews from "./allNews/index.vue"
 export default {
 components:{
   aheader,
-  asidebar
+  asidebar,
+  allNews
 }
 }
 </script>
