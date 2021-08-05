@@ -4,7 +4,7 @@
       <img :src=item.author.avatar_url alt="">
       <div class="count">
           <span class="one">{{item.reply_count}}</span>
-          <span>/</span>
+          <span class="three">/</span>
           <span class="two">{{item.visit_count}}</span>
       </div>
       <div class='putTop' v-show="item.top==true">置顶</div> 
