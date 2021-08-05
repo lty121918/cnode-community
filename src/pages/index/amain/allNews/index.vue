@@ -11,9 +11,6 @@
       <div class='putTop' v-show="item.good==true">精华</div>
       <div class="putTab" v-show="item.good==false&&item.top==false&&item.tab=='share'">分享</div>
       <div class="putTab" v-show="item.good==false&&item.top==false&&item.tab=='ask'">问答</div>
-      <!-- <div class="put-ask">问答</div>
-      <div class="put-share">分享</div>
-      <div class="put-good" :class{put-good:isgood}>精华</div> -->
       <div class="title"> {{item.title}}</div> 
       <div class="create_at">{{item.create_at}}</div>
     </div>

@@ -6,10 +6,20 @@
 #main{
     width: 90%;
     margin: 0.15rem auto;
+    // overflow: hidden;
+    &:after{
+        content: '';
+        display: block;
+        width: 0px;
+        height: 0px;
+        clear: left;
+    }
 }
 .content{
     float: left;
     width: 77%;
+    background-color: #fff;
+
 }
 .content-sidebar{
     font-size: 0.14rem;
