@@ -6,9 +6,6 @@ import VueRouter from 'vue-router'
 Vue.use(VueRouter)
 //引用页面
 import index from '../pages/index/index.vue'
-import allNews from '../pages/index/amain/allNews/index.vue'
-import share from '../pages/index/amain/share/index.vue'
-import good from '../pages/index/amain/good/index.vue'
 //定义routes路由的集合，数组类型
 const routes = [
   //单个路由均为对象类型，path代表的是路径，component代表组件

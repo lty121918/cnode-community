@@ -1,19 +1,115 @@
 .sidebar{
     width: 290px;
+    height: 800px;
     float: right;
-    background-color: red;
     .panel-login{
         width: 290px;
-        padding: 10;
-        // height: 290px;
-        background-color: red;
+        padding: 0.1rem;
+        text-align: left;
+        background-color: #fff;
+        margin-bottom: 0.15rem;
+
         p{
             font-size: 0.14rem;
+            color: #333333;
+            margin-bottom: 0.15rem;
+        }
+        div{
+        span{
+            display: block;
+            font-size: 0.13rem;
+            margin-bottom: 0.07rem;
+            i{
+                margin-bottom: 0.1rem;
+                color: #778087;
+                font-style: normal;
+                cursor: pointer;
+            }
         }
         button{
-            width: 1.3rem;
+            width: 1.5rem;
+            height: 0.34rem;
             padding: 0 0.1rem;
             background-color: #5bc0de;
+            border: none;
+            font-size: 0.14rem;
+            color: #fff;
+            border-radius: 0.05rem;
+            cursor: pointer;
+            &:hover{
+                background-color: #08c;
+                transition: all .3s;
+            }
+        }
+      }
+    }
+    //几个模块的公用头
+    .header{
+        padding: 0.1rem;
+        width: 270px;
+        height: 20px;
+        text-align: left;
+        background-color: #f6f6f6;
+        span{
+            font-size: 13px;
+            color: #444444;
+        }
+    }
+    //无人回复板块
+    .panel-two{
+        width: 290px;
+        border-radius: 3px;
+        background-color: #fff;
+        margin-bottom: 0.15rem;
+        .inner{
+            width: 270px;
+            height: 158px;
+            padding: 10px;
+            ul{
+                text-align: left;
+                li{
+                margin: 0.1rem 0;
+                color: #778087;
+                font-size: 0.14rem;
+                overflow: hidden;
+                /* 强制文字不换行 */
+                 white-space: nowrap;
+                /* 超出部分显示省略号 */
+                 text-overflow: ellipsis;
+                }
+            }
+        }
+
+    }
+    //积分榜
+    // .panel-three{
+    //     // .inner{
+
+    //     // }
+    // }
+    .panel-four{
+        background-color: #fff;
+        margin-bottom: 0.1rem;
+        a{
+            img{
+                &:first-child{
+                    margin-top: 0.1rem;
+                }
+                &:last-child{
+                    margin-bottom: 0.1rem;
+                }
+                width: 200px;
+                height: 65px;
+            }
+        }
+    }
+    .panel-five{
+        background-color: #fff;
+        width: 100%;
+        img{
+            margin: 0.1rem 0;
+            width: 200px;
+            height: 200px;
         }
     }
 }
