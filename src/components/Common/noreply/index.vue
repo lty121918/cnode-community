@@ -22,7 +22,6 @@ mounted(){
  request({
          url:'topics',
         }).then(res=>{
-            // let index=3;
             for(let index=0;index<res.data.data.length;index++){
                   let reply=res.data.data[index].reply_count;
                   if(reply==0&&this.noReply.length<5){

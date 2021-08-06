@@ -2,7 +2,7 @@
   <div id="main">
     <!-- 左边内容 -->
     <div class="content">
-      <aheader></aheader>
+      <aheader @changeTab="changeTab"></aheader>
       <!-- <router-view></router-view>  -->
       <keep-alive>
         <component :is="currentView"></component>
@@ -20,11 +20,12 @@ import aheader from "./header/index.vue"
 import asidebar from "../sidebar/index.vue"
 import allNews from "./allNews/index.vue"
 import ashare from "./share/index.vue"
+import agood from "./good/index.vue"
 export default {
   data(){
     return{
       domIndex:1,
-      currentTab: ['allNews','ashare','ask']
+      currentTab: ['allNews','agood','ashare','ask']
     }
   },
   computed:{
@@ -32,11 +33,19 @@ export default {
         return this.currentTab[this.domIndex];
     }
   },
+  methods:{
+    changeTab(val){
+      this.domIndex=val;
+      console.log(val);
+      
+    }
+  },
 components:{
   aheader,
   asidebar,
   allNews,
-  ashare
+  ashare,
+  agood
 }
 }
 </script>

@@ -21,6 +21,7 @@ export default {
             this.domIndex = index;
             console.log(`${this.domIndex}`);
             console.log(this.domIndex==index);
+            this.$emit('changeTab',this.domIndex);
             
         }
   }
