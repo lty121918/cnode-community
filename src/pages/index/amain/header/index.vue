@@ -15,7 +15,11 @@ export default {
       // ask share job good
       headerNews:[
         {text:"全部", tab:""},
-        {text: "精华", tab: "good"}
+        {text: "精华", tab: "good"},
+        {text: "分享", tab: "good"},
+        {text: "问答", tab: "ask"},
+        {text: "招聘", tab: "job"},
+        {text: "客户端测试", tab: "good"}
         // "全部","精华","分享","问答","招聘","客户端测试"
         ],
       domIndex:0

@@ -20,8 +20,8 @@
 import aheader from "./header/index.vue"
 import asidebar from "../sidebar/index.vue"
 import allNews from "./allNews/index.vue"
-import ashare from "./share/index.vue"
-import agood from "./good/index.vue"
+// import ashare from "./share/index.vue"
+// import agood from "./good/index.vue"
 import {request} from "../../../network/request/request"
 import {selfScrollTo,renderTime,getDateDiff} from '../../../utils/utils'
 
@@ -73,8 +73,8 @@ components:{
   aheader,
   asidebar,
   allNews,
-  ashare,
-  agood
+  // ashare,
+  // agood
 }
 }
 </script>
