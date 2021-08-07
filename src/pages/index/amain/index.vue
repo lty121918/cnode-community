@@ -35,9 +35,7 @@ export default {
   },
   methods:{
     changeTab(val){
-      this.domIndex=val;
-      console.log(val);
-      
+      this.domIndex=val;      
     }
   },
 components:{
