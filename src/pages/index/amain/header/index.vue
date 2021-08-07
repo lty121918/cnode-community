@@ -2,8 +2,8 @@
   <div class="header">
       <a href="javascript:;" class="topic-tab"
          v-for="(item,index) in headerNews"
-         @click="checked(index)"
-        :class="{on:index===domIndex}">{{item}}</a>
+         @click="checked(item.tab)"
+        :class="{on:index===domIndex}">{{item.text}}</a>
   
   </div>
 </template>
@@ -12,7 +12,12 @@
 export default {
   data(){
     return{
-      headerNews:["全部","精华","分享","问答","招聘","客户端测试"],
+      // ask share job good
+      headerNews:[
+        {text:"全部", tab:""},
+        {text: "精华", tab: "good"}
+        // "全部","精华","分享","问答","招聘","客户端测试"
+        ],
       domIndex:0
     }
   },
@@ -21,8 +26,7 @@ export default {
             this.domIndex = index;
             console.log(`${this.domIndex}`);
             console.log(this.domIndex==index);
-            this.$emit('changeTab',this.domIndex);
-            
+            this.$emit('changeTab',index);
         }
   }
 }

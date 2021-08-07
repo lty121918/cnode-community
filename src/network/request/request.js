@@ -5,5 +5,6 @@ export function request(config){
             baseURL:"https://cnodejs.org/api/v1",
             timeout:50000
         });
+        console.log("=====",newVar, config)
         return newVar(config);  
 }

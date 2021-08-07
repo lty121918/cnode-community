@@ -13,10 +13,23 @@ const routes = [
     path: '/',
     name: 'index',
     component: index,
+    redirect: '/topic',
+    children:[
+      {
+        path: '/topic',
+        name: 'topic',
+        component: () => import("../pages/index/amain/index.vue")
+      },
+      {
+        path:'/topic/:id',
+        name:'detail',
+        component: () => import('../pages/detail/index.vue'),
+      }
+    ]
   },
   {path: '/login',name: 'Login',component: () => import('../pages/login/index.vue')},
   {path: '/api',name: 'Api',component: () => import('../pages/apiPage/index.vue')},
-  {path:'',redirect:"index"},//可以配置重定向
+  // {path:'*',redirect:"index"},//可以配置重定向
   //{path:"",component:Home}//或者重新写个路径为空的路由
 ]
 
