@@ -5,7 +5,6 @@
       <aheader :currentTab="currentTab" @changeTab="changeTab"></aheader>
       <!-- <router-view></router-view>  -->
       <keep-alive>
-        <!-- <component :is="currentView"></component> -->
         <allNews :listData="listData"></allNews> 
       </keep-alive>
     </div>
@@ -20,8 +19,6 @@
 import aheader from "./header/index.vue"
 import asidebar from "../sidebar/index.vue"
 import allNews from "./allNews/index.vue"
-// import ashare from "./share/index.vue"
-// import agood from "./good/index.vue"
 import {request} from "../../../network/request/request"
 import {selfScrollTo,renderTime,getDateDiff} from '../../../utils/utils'
 
@@ -38,7 +35,7 @@ export default {
     }
   },
   created() {
-    // 已经又 this 了有this 就可以操作data
+    // 已经有 this 了,有this 就可以操作data
     // 1. 做初始数据请求
     // 2. 对不同组件需要的数据做处理
     this.fetchListData({limit: 50, tab: this.currentTab})
@@ -73,8 +70,6 @@ components:{
   aheader,
   asidebar,
   allNews,
-  // ashare,
-  // agood
 }
 }
 </script>

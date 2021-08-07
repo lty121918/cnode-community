@@ -19,8 +19,6 @@
 </template>
 
 <script>
-import {selfScrollTo,renderTime,getDateDiff} from '../../../../utils/utils'
-import {request} from '../../../../network/request/request'
 export default {
 name: 'AllNews',
 data(){
