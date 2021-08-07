@@ -38,6 +38,7 @@ export default {
     // 1. 做初始数据请求
     // 2. 对不同组件需要的数据做处理
     this.fetchListData({limit: 50, tab: this.currentTab})
+    //最开始全部tab的信息，这里的this.currentTab='allNews'
   },
   computed:{
     currentView(){
@@ -47,10 +48,7 @@ export default {
   methods:{
     changeTab(val){
       this.domIndex=val;
-      this.fetchListData({
-        limit: 45,
-        tab: val
-      })      
+      this.fetchListData({ limit: 45,tab: val})      
     },
 
     fetchListData(params) {
@@ -58,8 +56,8 @@ export default {
          url:'topics',
          params: params
         }).then(res=>{
-          this.listData = res.data.data.map(v => Object.assign(v, {create_at: getDateDiff(renderTime(v.create_at))}))
-          this.noReData = this.listData.filter(v => v.reply_count == 0)
+          this.listData = res.data.data.map(v => Object.assign(v, {create_at: getDateDiff(renderTime(v.create_at))}));
+          this.noReData = this.listData.filter(v => v.reply_count == 0);
         }).catch(err=>{
           console.log(err); 
         });
