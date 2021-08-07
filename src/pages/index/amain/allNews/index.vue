@@ -9,9 +9,10 @@
           <span class="two">{{item.visit_count}}</span>
       </div>
       <div class='putTop' v-show="item.top==true">置顶</div> 
-      <!-- <div class='putTop' v-show="item.good==true">精华</div> -->
-      <!-- <div class="putTab" v-show="item.good==false&&item.top==false&&item.tab=='share'">分享</div> -->
-      <!-- <div class="putTab" v-show="item.good==false&&item.top==false&&item.tab=='ask'">问答</div> -->
+      <div class='putTop' v-show="item.good==true&&item.top==false">精华</div>
+      <div class="putTab" v-show="item.good==false&&item.top==false&&item.tab=='share'">分享</div>
+      <div class="putTab" v-show="item.good==false&&item.top==false&&item.tab=='ask'">问答</div>
+      <div class="putTab" v-show="item.good==false&&item.top==false&&item.tab=='job'">招聘</div>
       <router-link :to="`/topic/${item.id}`" class="title"> {{item.title}}</router-link> 
       <div class="create_at">{{item.create_at}}</div>
     </div>
