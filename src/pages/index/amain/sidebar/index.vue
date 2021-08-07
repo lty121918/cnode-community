@@ -24,9 +24,9 @@
           <span>友情社区</span>
         </div>
         <div class="inner">
-          <a href=""><img src="../../../assets/images/qiniu.png" alt=""></a>
-          <a href=""><img src="../../../assets/images/phphub-logo.png" alt=""></a>
-          <a href=""><img src="../../../assets/images/digitalocean.png" alt=""></a>
+          <a href=""><img src="../../../../assets/images/qiniu.png" alt=""></a>
+          <a href=""><img src="../../../../assets/images/phphub-logo.png" alt=""></a>
+          <a href=""><img src="../../../../assets/images/digitalocean.png" alt=""></a>
         </div>
       </div>
       <div class="panel-five">
@@ -34,7 +34,7 @@
           <span>客户端二维码</span>
         </div>
         <div class="inner">
-         <img src="../../../assets/images/twoMa.png" alt="">
+         <img src="../../../../assets/images/twoMa.png" alt="">
         </div>
       </div>
     </div>
@@ -42,24 +42,23 @@
 </template>
 
 <script>
-import noReply from '../../../components/Common/noreply/index.vue'
-import {request} from '../../../network/request/request'
+import noReply from '../../../../components/Common/noreply/index.vue'
+import {request} from '../../../../network/request/request'
 export default {
   data(){
     return{
-      noReply:[]
-              
+      noReply:[]         
     }
   },
   mounted(){
         //用户积分榜
- request({
-         url:'user/alsotang',
-        }).then(res=>{
-            console.log(res.data.data.score);   
-        }).catch(err=>{
-          console.log(err); 
-        });
+//  request({
+//          url:'user/alsotang',
+//         }).then(res=>{
+//             console.log(res.data.data.score);   
+//         }).catch(err=>{
+//           console.log(err); 
+//         });
 
 
   },

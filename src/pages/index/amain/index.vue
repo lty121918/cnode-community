@@ -3,7 +3,6 @@
     <!-- 左边内容 -->
     <div class="content">
       <aheader :currentTab="currentTab" @changeTab="changeTab"></aheader>
-      <!-- <router-view></router-view>  -->
       <keep-alive>
         <allNews :listData="listData"></allNews> 
       </keep-alive>
@@ -17,7 +16,7 @@
 
 <script>
 import aheader from "./header/index.vue"
-import asidebar from "../sidebar/index.vue"
+import asidebar from "./sidebar/index.vue"
 import allNews from "./allNews/index.vue"
 import {request} from "../../../network/request/request"
 import {selfScrollTo,renderTime,getDateDiff} from '../../../utils/utils'
@@ -53,6 +52,7 @@ export default {
         tab: val
       })      
     },
+
     fetchListData(params) {
       request({
          url:'topics',
@@ -63,9 +63,9 @@ export default {
         }).catch(err=>{
           console.log(err); 
         });
-
     }
   },
+
 components:{
   aheader,
   asidebar,

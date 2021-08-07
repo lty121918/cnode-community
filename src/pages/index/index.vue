@@ -1,10 +1,6 @@
 <template>
   <div id="app">  
-      <navbar></navbar>
-      <!-- <amain></amain> -->
-    <!-- router-link定义页面中点击触发部分 -->
-      <!-- <router-link to="/">Home</router-link>
-      <router-link to="/about">About</router-link>  -->
+    <navbar></navbar>
     <router-view></router-view>
     <footer></footer>
     <!-- 定义页面中显示部分 -->
