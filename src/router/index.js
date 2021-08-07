@@ -10,24 +10,12 @@ import index from '../pages/index/index.vue'
 const routes = [
   //单个路由均为对象类型，path代表的是路径，component代表组件
   {
-    path: '/',name: 'index',
+    path: '/',
+    name: 'index',
     component: index,
-    // children:[
-    //   {
-    //     path:'',
-    //     component:allNews
-    //   },
-    //   {
-    //     path:'share',
-    //     component:share
-    //   },
-    //   {
-    //     path:'good',
-    //     component:good
-    //   }
-    // ]
   },
-  // {path: '/about',name: 'About',component: () => import(/* webpackChunkName: "about" */ '../views/About.vue')},
+  {path: '/login',name: 'Login',component: () => import('../pages/login/index.vue')},
+  {path: '/api',name: 'Api',component: () => import('../pages/apiPage/index.vue')},
   {path:'',redirect:"index"},//可以配置重定向
   //{path:"",component:Home}//或者重新写个路径为空的路由
 ]

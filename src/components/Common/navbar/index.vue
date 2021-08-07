@@ -20,7 +20,7 @@
         <li><a href="/api">API</a></li>
         <li><a href="/about">关于</a></li>
         <li><a href="/signup">注册</a></li>
-        <li><a href="/signin">登录</a></li>  
+        <li><a href="/login">登录</a></li>  
       </ul>
       <!-- 右侧导航栏 -->
 
