@@ -28,7 +28,7 @@ mounted(){
                     this.noReply.push(res.data.data[index]);
                   }
             }
-            console.log(this.noReply);   
+            // console.log(this.noReply);   
         }).catch(err=>{
           console.log(err); 
         });

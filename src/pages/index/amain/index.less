@@ -4,9 +4,11 @@
     }
 }
 #main{
+    @media screen and (max-width:979px){
+        width: 98%;
+    }
     width: 90%;
     margin: 0.15rem auto;
-    // overflow: hidden;
     &:after{
         content: '';
         display: block;
@@ -16,6 +18,10 @@
     }
 }
 .content{
+    @media screen and (max-width:979px){
+        width: 100%;
+        
+    }
     float: left;
     width: 77%;
     background-color: #fff;
@@ -23,6 +29,7 @@
 }
 .content-sidebar{
     font-size: 0.14rem;
+    margin-left: 0.1rem;
     float: right;
-    width: 23%;
+    width: 22%;
 }

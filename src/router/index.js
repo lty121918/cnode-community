@@ -11,19 +11,20 @@ const routes = [
   //单个路由均为对象类型，path代表的是路径，component代表组件
   {
     path: '/',
-    name: 'index',
+    // name: 'index',
     component: index,
     redirect: '/topic',
     children:[
       {
         path: '/topic',
-        name: 'topic',
+        // name: 'topic',
         component: () => import("../pages/index/amain/index.vue")
       },
       {
-        path:'/topic/:id',
+        path:'/topic/:id',//动态路由
         name:'detail',
         component: () => import('../pages/detail/index.vue'),
+        props:true //开启props传参，把id传到子组件中去
       }
     ]
   },

@@ -30,11 +30,10 @@
 </template>
 
 <script>
-// import "../../../assets/css/base.css";
 export default {
 
 }
 </script>
 <style lang="less">
-	@import "./index02.less";
+	@import "./index.less";
 </style>

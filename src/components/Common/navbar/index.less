@@ -3,13 +3,26 @@
    overflow: hidden;
    background: #444;
    .container{
+    @media screen and (max-width: 979px) {
+        margin: 0 auto;
+    }
     width: 90%; 
     margin: 0 auto;
-    height: 0.5rem;
+    text-align: center;
+    margin-bottom: 0.1rem;
+    &::after{
+        content: "";
+        display: block;
+        height: 0;
+        clear:both;
+        visibility: hidden;
+
+    }
         .brand{
-           @media screen and (max-width: 400px) {
+            @media screen and (max-width: 400px) {
                 float: none;
                 margin: 0 auto;
+                clear: both;
             }
             font-size: 0.16rem;
             display: block;
@@ -25,10 +38,10 @@
             }
         }
         .navbar-search{  //搜索盒子
-            // @media screen and (max-width: 400px) {  ////////没反应，明天试8.7
-            //     margin: 0 auto;
-            //    clear: both;
-            // }
+            @media screen and (max-width: 400px) {
+                margin: 0 30px;
+                clear: both;
+            }
             text-align: left;
             line-height: 0.5rem;
             font-size: 0.16rem;
