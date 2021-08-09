@@ -1,9 +1,9 @@
 <template>
   <div>
-    <div class="left">
+    <div class="content">
       <div v-html="content"></div>
     </div>
-    <div class="right"></div>
+    <div class="sidebar"></div>
   </div>
 </template>
 
