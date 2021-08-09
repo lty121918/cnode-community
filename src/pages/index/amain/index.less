@@ -23,10 +23,19 @@
 .content{
     flex: 1;
     background-color: #fff;
+    height: 800px;
 
 }
 .content-sidebar{
+    @media screen and (max-width:979px) {
+            float: none;
+            position: absolute;
+            right: -100%;
+            top: 0;
+            display: none;
+    }
     width: 290px;
     font-size: 0.14rem;
     margin-left: 15px;
+    height: 800px;
 }
