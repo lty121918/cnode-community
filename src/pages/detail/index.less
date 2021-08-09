@@ -1,5 +1,17 @@
-.left{
-    width: 77%;
-    background-color: #fff;
-    margin-top: 15px;
+.detail{
+    width: 90%;
+    margin: 15px auto;
+    display: flex;
+    .content{
+        flex: 1;
+        background-color: #fff;
+    }
+    .sidebar{
+        @media screen and (max-width:979px) {
+            display: none;
+        }
+        background-color: red;
+        flex-basis: 290px;
+        margin-left: 15px;
+    }
 }
