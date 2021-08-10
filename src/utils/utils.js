@@ -12,10 +12,10 @@ export const selfScrollTo = (number) =>  {
         
         document.documentElement.scrollTop += step;
         if(Math.abs(document.documentElement.scrollTop - number) > Math.abs(step)){
-            console.log('继续执行');
+            // console.log('继续执行');
             
           }else {
-            console.log('结束');
+            // console.log('结束');
             clearInterval(timer);
           }
     
