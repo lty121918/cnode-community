@@ -25,11 +25,25 @@ const routes = [
         name:'detail',
         component: () => import('../pages/detail/index.vue'),
         props:true //开启props传参，把id传到子组件中去
-      }
+      },
+      {
+        path:'/userdetail/:loginname',//动态路由
+        name:'userdetail',
+        component: () => import('../pages/userDetail/index.vue'),
+        props:true //开启props传参，把id传到子组件中去
+      },
     ]
   },
   {path: '/login',name: 'Login',component: () => import('../pages/login/index.vue')},
   {path: '/api',name: 'Api',component: () => import('../pages/apiPage/index.vue')},
+
+  // {
+  //   path:'/userdetail/:loginname',
+  //   component:()=> import('../pages/userDetail/index.vue'),
+  //   props:true //开启props传参，把id传到子组件中去
+  // }
+
+
   // {path:'*',redirect:"index"},//可以配置重定向
   //{path:"",component:Home}//或者重新写个路径为空的路由
 ]

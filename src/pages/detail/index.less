@@ -25,8 +25,45 @@
             }
             .replies_content{
                 li{
+                   display: flex;
+                   flex-direction: row;
+                   flex-wrap: wrap;
+                   align-items: flex-start;
                    padding: 10px;
-                   border-bottom: 1px solid red; 
+                   border-bottom: 1px solid #f0f0f0;
+                   img{
+                       width: 30px;
+                       height: 30px;
+                       margin-right: 5px;
+                   }
+                   .replies_author{
+                       font-size: 12px;
+                       color: #666;
+                       font-weight: 700;
+                       margin-right: 5px;
+                       margin-top: 5px;
+                   }
+                   .replies_time{
+                       font-size: 12px;
+                       color: #08c;
+                       margin-top: 5px;
+                       .circle{
+                        display: inline-block;
+                        width: 5px;
+                        height: 5px;
+                        border-radius: 50%;
+                        background-color: #08c;
+                        margin-bottom:2px;
+                    }
+                   }
+                   
+                   .replies_markdown{
+                       margin-left: 25px;
+                       flex:1;
+                       flex-basis: 100%;
+                       
+                  
+                   }
                 }
             }
         }

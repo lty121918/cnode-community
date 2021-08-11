@@ -3,7 +3,7 @@
     <!-- 内容 --start-->
     <div class="container">
       <!-- 图标 -->
-      <a class="brand" href="#">     
+      <a class="brand" href="/">     
           <img src="//static2.cnodejs.org/public/images/cnodejs_light.svg">
       </a>
       <!-- 图标 -->
