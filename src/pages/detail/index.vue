@@ -24,7 +24,18 @@
 
     <!-- 侧边栏 start -->
     <div class="sidebar"  v-if="loginname">
-      <author :author="loginname"></author>
+      <!-- 作者信息 其实这里可以不封装成组件-->
+      <author :author="author"></author>
+      <!-- 作者的其他话题 -->
+      <div class="recent_topics">
+        <div class="recent_topics_header"><span>作者的其他话题</span></div>
+        <div class="recent_topics_inner">
+          <ul>
+            <li v-for="(item,i) in author">{{item.recent_topics[i].title}}</li>
+          </ul>
+        </div>
+      </div>
+      <!-- 无人回复的话题 -->
       <noReply></noReply>
     </div>
     <!-- 侧边栏 end -->
@@ -36,7 +47,7 @@ import {getDateDiff,renderTime} from "../../utils/utils"
 import aheader from"./header/index.vue"
 import {request} from '../../network/request/request'
 import author from "../../components/Common/author/index.vue"
-import noReply from "../../components/Common/noreply/index.vue"
+import noReply from "@/components/Common/noreply/index.vue"
 export default {
   data(){
     return{
@@ -44,7 +55,8 @@ export default {
       message:{}, //传给子组件header的信息
       create_at:'',
       reply:{},
-      loginname:''
+      loginname:"",
+      author:{}
 
     }
   },
@@ -61,20 +73,29 @@ mounted(){
     request({
          url:`topic/${this.id}`,
         }).then(res=>{
-          this.content=res.data.data.content;
-          console.log(res.data.data); 
-          this.message=res.data.data;
-          this.create_at=getDateDiff(renderTime(res.data.data.create_at));
+          // 接收一个id，根据这个id获取文章的详情
+          this.content=res.data.data.content;//文章包含的内容
+          this.message=res.data.data;//传给头的信息
+          this.create_at=getDateDiff(renderTime(res.data.data.create_at));//创建时间也传给头
+          //下面回复的信息
           this.reply = res.data.data.replies.map(v => Object.assign(v, {create_at: getDateDiff(renderTime(v.create_at))}));
-          console.log(this.reply);
+
           this.loginname=res.data.data.author.loginname;
-          // console.log(this.loginname);
-          
-        }).catch(err=>{
-          console.log(err); 
-        });
-    
-    }
+          console.log(this.loginname); 
+              request({
+                  url:`user/${this.loginname}`,
+                  }).then(res=>{
+                      // console.log(res.data.data);
+                      this.author=res.data.data;
+                      // console.log(this.author.recent_topics[1].title);       
+                  }).catch(err=>{
+                    console.log(err); 
+                  }); 
+          }).catch(err=>{
+            console.log(err); 
+          });
+            
+      }
 }
   
 

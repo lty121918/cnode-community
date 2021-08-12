@@ -16,23 +16,31 @@
         }
     }
     .inner{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-start;
         width: 270px;
-        height: 158px;
-        padding: 10px;
-        
-        ul{
-            text-align: left;
-            li{
-            margin: 0.1rem 0;
-            color: #778087;
-            font-size: 0.14rem;
-            overflow: hidden;
-            /* 强制文字不换行 */
-             white-space: nowrap;
-            /* 超出部分显示省略号 */
-             text-overflow: ellipsis;
+        padding:10px;
+            img{
+                width: 48px;
+                height: 48px;
+            }
+            .author_loginname{
+                font-size: 16px;
+                color: #778087;
+            }
+            .author_score{
+                flex: 1;
+                flex-basis: 100%;
+                width: 100px;
+                text-align: left;
+            }
+            .floor{
+                flex: 1;
+                flex-basis: 100%;
+                width: 100px;
+                text-align: left;
             }
         }
     }
 
-}

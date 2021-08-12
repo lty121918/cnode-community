@@ -4,36 +4,17 @@
       <span>作者</span>
     </div>
     <div class="inner">
-        <img src="" alt="">
-        <p>{{this.author}}</p>
-        <p>积分:</p>
-        <p></p>
+        <img :src=author.avatar_url alt="">
+        <p class="author_loginname">{{this.author.loginname}}</p>
+        <p class="author_score">积分:{{author.score}}</p>
+        <p class="floor">“这个人很懒，什么都没有留下”</p>
     </div>
   </div>
 </template>
 
 <script>
-import { request } from '../../../network/request/request';
 export default {
-    props:{
-        author:{
-            default:"czy88840616"
-        }
-    },
-    data(){
-        return{
-            loginnname:this.author,
-        }
-    },
-    mounted(){
-        request({
-         url:`user/${this.loginname}`,
-        }).then(res=>{
-            console.log(res);        
-        }).catch(err=>{
-          console.log(err); 
-        });
-    }
+    props:["author"]
 };
 </script>
 
