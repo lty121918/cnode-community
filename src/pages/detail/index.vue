@@ -9,7 +9,7 @@
         <div class="replies_header">{{reply.length}}&nbsp;回复</div>
         <ul class="replies_content">
           <li class="replies_items" v-for="(item,index) in reply">
-          <router-link :to="`/userdetail/${item.author.loginname}`">
+          <router-link :to="`/user/${item.author.loginname}`">
             <img :src=item.author.avatar_url alt="">
             <div class="replies_author">{{item.author.loginname}}</div>
             </router-link>
@@ -30,8 +30,8 @@
       <div class="recent_topics">
         <div class="recent_topics_header"><span>作者的其他话题</span></div>
         <div class="recent_topics_inner">
-          <ul>
-            <li v-for="(item,i) in author">{{item.recent_topics[i].title}}</li>
+          <ul >
+            <li v-for="(item,i) in author.recent_topics">{{item.title}}</li>
           </ul>
         </div>
       </div>
@@ -56,7 +56,7 @@ export default {
       create_at:'',
       reply:{},
       loginname:"",
-      author:{}
+      author:[]
 
     }
   },
@@ -87,7 +87,9 @@ mounted(){
                   }).then(res=>{
                       // console.log(res.data.data);
                       this.author=res.data.data;
-                      // console.log(this.author.recent_topics[1].title);       
+                      this.author.recent_topics=this.author.recent_topics.slice(0,5);
+                      console.log(this.author);
+                             
                   }).catch(err=>{
                     console.log(err); 
                   }); 

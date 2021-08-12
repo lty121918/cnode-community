@@ -61,8 +61,6 @@
                        margin-left: 25px;
                        flex:1;
                        flex-basis: 100%;
-                       
-                  
                    }
                 }
             }
@@ -73,7 +71,6 @@
         @media screen and (max-width:979px) {
             display: none;
         }
-        background-color: red;
         flex-basis: 290px;
         margin-left: 15px;
         .recent_topics{
@@ -96,6 +93,17 @@
             .recent_topics_inner{
                 width: 270px;
                 padding:10px;
+                ul{
+                    li{
+                        &:first-child{
+                            margin-top: 0;
+                        }
+                        text-align: left;
+                        font-size: 14px;
+                        color: #778087;
+                        margin: 10px 0;
+                    }
+                }
             }
         }
     }

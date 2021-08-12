@@ -27,8 +27,8 @@ const routes = [
         props:true //开启props传参，把id传到子组件中去
       },
       {
-        path:'/userdetail/:loginname',//动态路由
-        name:'userdetail',
+        path:'/user/:loginname',//动态路由
+        name:'user',
         component: () => import('../pages/userDetail/index.vue'),
         props:true //开启props传参，把id传到子组件中去
       },
