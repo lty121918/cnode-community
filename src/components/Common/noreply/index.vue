@@ -5,7 +5,7 @@
     </div>
     <div class="inner">
       <ul class="unstyled" v-for="(item, index) in noReply">
-        <li>{{ item.title }}</li>
+        <li><router-link :to="`/topic/${item.id}`">{{ item.title }}</router-link></li>
       </ul>
     </div>
   </div>
@@ -18,6 +18,13 @@ data(){
     noReply:[]
     }
 },
+// 不推荐、用户体验不好
+watch: {
+	'$route' (to, from) {
+    // 路由发生变化页面刷新
+	this.$router.go(0);
+		}
+},                                                                            
 mounted(){
  request({
          url:'topics',

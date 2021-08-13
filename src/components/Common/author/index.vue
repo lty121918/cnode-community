@@ -5,7 +5,7 @@
     </div>
     <div class="inner">
       <router-link :to="`/user/${author.loginname}`">
-        <img :src=author.avatar_url alt="">
+        <img :src='author.avatar_url' alt="">
         <p class="author_loginname">{{this.author.loginname}}</p>
       </router-link>
         <p class="author_score">积分:{{author.score}}</p>

@@ -37,7 +37,7 @@ export default {
     // 已经有 this 了,有this 就可以操作data
     // 1. 做初始数据请求
     // 2. 对不同组件需要的数据做处理
-    this.fetchListData({limit: 50, tab: this.currentTab})
+    this.fetchListData({limit: 45, tab: this.currentTab})
     //最开始全部tab的信息，这里的this.currentTab='allNews'
   },
   computed:{
@@ -58,6 +58,8 @@ export default {
         }).then(res=>{
           this.listData = res.data.data.map(v => Object.assign(v, {create_at: getDateDiff(renderTime(v.create_at))}));
           this.noReData = this.listData.filter(v => v.reply_count == 0);
+          // console.log(this.listData);
+          
         }).catch(err=>{
           console.log(err); 
         });

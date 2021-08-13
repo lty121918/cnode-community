@@ -1,7 +1,9 @@
 <template>
   <div class="allNews">
-    <div class="nav-list" v-for="(item,index) in listData" >
-      <img :src=item.author.avatar_url alt="">
+    <div class="nav-list" v-for="(item,index) in listData">
+       <router-link :to="`/user/${item.author.loginname}`">
+       <img :src='item.author.avatar_url' alt="">
+       </router-link>
       <div class="count">
           <span class="one">{{item.reply_count}}</span>
           <span class="three">/</span>

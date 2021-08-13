@@ -9,7 +9,7 @@
       </div>
       <!-- 无人回复的话题 -->
       <no-Reply></no-Reply>
-      <div class="panel-three">
+      <!-- <div class="panel-three">
         <div class="header">
           <span>积分榜</span>
         </div>
@@ -18,15 +18,15 @@
             <li></li>
           </ul>
         </div>
-      </div>
+      </div> -->
       <div class="panel-four">
         <div class="header">
           <span>友情社区</span>
         </div>
-        <div class="inner">
-          <a href=""><img src="../../../../assets/images/qiniu.png" alt=""></a>
-          <a href=""><img src="../../../../assets/images/phphub-logo.png" alt=""></a>
-          <a href=""><img src="../../../../assets/images/digitalocean.png" alt=""></a>
+        <div class="inner two">
+          <a href="https://ruby-china.org/" target="_blank"><img src="../../../../assets/images/ruby-china-20150529.png" alt="" class="ruby"></a>
+          <a href="https://golangtc.com/" target="_blank"><img src="../../../../assets/images/golangtc-logo.png" alt="" class="golang"></a>
+          <a href="http://phphub.org/" target="_blank"><img src="../../../../assets/images/phphub-logo.png" alt="" class="php"></a>
         </div>
       </div>
       <div class="panel-five">
@@ -43,7 +43,6 @@
 
 <script>
 import noReply from '../../../../components/Common/noreply/index.vue'
-import {request} from '../../../../network/request/request'
 export default {
   data(){
     return{
@@ -51,15 +50,6 @@ export default {
     }
   },
   mounted(){
-        //用户积分榜
-//  request({
-//          url:'user/alsotang',
-//         }).then(res=>{
-//             console.log(res.data.data.score);   
-//         }).catch(err=>{
-//           console.log(err); 
-//         });
-
 
   },
   components:{

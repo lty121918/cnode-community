@@ -1,5 +1,21 @@
 .markdown-text{
     font-size: 16px;
+    pre{
+        code{
+            display: none;
+            //不会设置这个的大小，导致页面乱了，在极度愤怒地情况下隐藏了，2021.8.13
+        }
+    }
+    p{
+        img{
+            width: 200px;
+        }
+        a{
+            img{
+                width: 100px;
+            }
+        }
+    }
 }
 .markdown{
 @media screen and (max-width:400px) {

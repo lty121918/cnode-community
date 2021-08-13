@@ -10,7 +10,7 @@
         <ul class="replies_content">
           <li class="replies_items" v-for="(item,index) in reply">
           <router-link :to="`/user/${item.author.loginname}`">
-            <img :src=item.author.avatar_url alt="">
+            <img :src='item.author.avatar_url' alt="">
             <div class="replies_author">{{item.author.loginname}}</div>
             </router-link>
             <div class="replies_time">{{index+1}}楼&nbsp;<div class="circle"></div>&nbsp;{{item.create_at}}</div>
@@ -31,7 +31,7 @@
         <div class="recent_topics_header"><span>作者的其他话题</span></div>
         <div class="recent_topics_inner">
           <ul >
-            <li v-for="(item,i) in author.recent_topics">{{item.title}}</li>
+            <li v-for="(item,i) in author.recent_topics"><router-link :to="`/topic/${item.id}`">{{item.title}}</router-link></li>
           </ul>
         </div>
       </div>
@@ -81,14 +81,14 @@ mounted(){
           this.reply = res.data.data.replies.map(v => Object.assign(v, {create_at: getDateDiff(renderTime(v.create_at))}));
 
           this.loginname=res.data.data.author.loginname;
-          console.log(JSON.stringify(this.loginname)); 
+          // console.log(JSON.stringify(this.loginname)); 
               request({
                   url:`user/${this.loginname}`,
                   }).then(res=>{
                       // console.log(res.data.data);
                       this.author=res.data.data;
                       this.author.recent_topics=this.author.recent_topics.slice(0,5);
-                      console.log(this.author);
+                      // console.log(this.author);
                              
                   }).catch(err=>{
                     console.log(err); 
