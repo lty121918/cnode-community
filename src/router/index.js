@@ -50,7 +50,7 @@ const routes = [
 
 //实例化VueRouter并将routes添加进去
 const router = new VueRouter({
-  mode: 'hash',
+  //mode: 'hash',
   base: process.env.BASE_URL,
   routes
 })
