@@ -9,24 +9,14 @@
       </div>
       <!-- 无人回复的话题 -->
       <no-Reply></no-Reply>
-      <!-- <div class="panel-three">
-        <div class="header">
-          <span>积分榜</span>
-        </div>
-        <div class="inner">
-          <ul class="unstyled">
-            <li></li>
-          </ul>
-        </div>
-      </div> -->
       <div class="panel-four">
         <div class="header">
           <span>友情社区</span>
         </div>
         <div class="inner two">
-          <a href="https://ruby-china.org/" target="_blank"><img src="../../../../assets/images/ruby-china-20150529.png" alt="" class="ruby"></a>
-          <a href="https://golangtc.com/" target="_blank"><img src="../../../../assets/images/golangtc-logo.png" alt="" class="golang"></a>
-          <a href="http://phphub.org/" target="_blank"><img src="../../../../assets/images/phphub-logo.png" alt="" class="php"></a>
+          <a href="https://ruby-china.org/" target="_blank"><img src="@/assets/images/ruby-china-20150529.png" alt="" class="ruby"></a>
+          <a href="https://golangtc.com/" target="_blank"><img src="@/assets/images/golangtc-logo.png" alt="" class="golang"></a>
+          <a href="http://phphub.org/" target="_blank"><img src="@/assets/images/phphub-logo.png" alt="" class="php"></a>
         </div>
       </div>
       <div class="panel-five">
@@ -34,7 +24,7 @@
           <span>客户端二维码</span>
         </div>
         <div class="inner">
-         <img src="../../../../assets/images/twoMa.png" alt="">
+         <img src="@/assets/images/twoMa.png" alt="">
         </div>
       </div>
     </div>
@@ -42,7 +32,7 @@
 </template>
 
 <script>
-import noReply from '../../../../components/Common/noreply/index.vue'
+import noReply from '@/components/Common/noreply/index.vue'
 export default {
   data(){
     return{

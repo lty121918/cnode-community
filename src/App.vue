@@ -1,36 +1,31 @@
 <template>
-  <div id="app">  
-    <router-view></router-view>
-  </div>
+    <div id="app">
+        <navbar></navbar>
+        <router-view></router-view>
+        <back-Top></back-Top>
+        <afooter></afooter>
+    </div>
 </template>
 <script>
-
-export default{
-
-}
+import navbar from "./components/Common/navbar/index.vue";
+import amain from "./pages/index/index.vue";
+import afooter from "./components/Common/footer/index.vue";
+import backTop from "./components/Common/backTop/index.vue";
+export default {
+    components: {
+        navbar,
+        amain,
+        backTop,
+        afooter,
+    },
+};
 </script>
 
 
 <style lang="less">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  background-color: #e1e1e1;
-}
-
-#nav {
-  padding: 30px;
-
-  a {
-    font-weight: bold;
-    color: #2c3e50;
-
-    &.router-link-exact-active {
-      color: #42b983;
-    }
+ body{
+    background-color: #e1e1e1;
+    
   }
-}
+
 </style>
