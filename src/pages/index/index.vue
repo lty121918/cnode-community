@@ -42,17 +42,9 @@ export default {
         };
     },
     created() {
-        // 已经有 this 了,有this 就可以操作data
-        // 1. 做初始数据请求
-        // 2. 对不同组件需要的数据做处理
         this.fetchListData({ limit: 45, tab: this.currentTab });
-        //最开始全部tab的信息，这里的this.currentTab='allNews'
     },
-    // computed: {
-    //     currentView() {
-    //         return this.currentTab[this.domIndex];
-    //     },
-    // },
+
     methods: {
         //nav栏切换
         changeNav(index) {
@@ -68,13 +60,13 @@ export default {
                     this.currentTab = "share";
                     break;
                 case 4:
-                    this.currentTab = "share";
-                    break;
-                case 5:
                     this.currentTab = "ask";
                     break;
-                case 6:
+                case 5:
                     this.currentTab = "job";
+                    break;
+                case 6:
+                    this.currentTab = "all";
                     break;
 
                 default:

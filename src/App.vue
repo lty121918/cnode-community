@@ -7,7 +7,7 @@
     </div>
 </template>
 <script>
-import navbar from "./components/Common/navbar/index.vue";
+import navbar from "@/components/Common/navbar/index.vue";
 import amain from "./pages/index/index.vue";
 import afooter from "./components/Common/footer/index.vue";
 import backTop from "./components/Common/backTop/index.vue";
