@@ -7,7 +7,7 @@
       &:hover{
           background-color: #f6f6f6;
       }
-      font-size: 16px;
+    font-size: 16px;
     position: relative;
     height: 0.3rem;
     width: 95%;
@@ -18,6 +18,9 @@
     flex-direction: row;
     align-items: center;
     overflow: hidden;
+    &:last-child{
+        border-bottom :transparent;
+    }
     img{
         display:block;
         height:0.3rem;
@@ -51,11 +54,15 @@
             color: #B4B4B4;
             font-size: 0.12rem;
         }
+        .three{
+            font-family:"Helvetica Neue","Luxi Sans","DejaVu Sans",Tahoma,"Hiragino Sans GB",STHeiti,sans-serif!important;
+        }
     }
     .putTop{  //绿色框框,置顶和精华
         text-align: center;
         min-width:30px;
         height: 18px;
+        line-height: 18px;
         margin-left: 0.02rem;
         float: left;
         font-size: 0.12rem;
@@ -67,6 +74,7 @@
     .putTab{  //灰色框框,问答和分享
         text-align: center;
         min-width:30px;
+        line-height: 0.18rem;
         height: 0.18rem;
         margin-left: 0.02rem;
         float: left;
@@ -101,7 +109,7 @@
         color: #778087;
         margin-right: 0.05rem;
         font-size: 0.12rem;
-        min-width: 40px;
+        min-width: 55px;
     }
 }
 

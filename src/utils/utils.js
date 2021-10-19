@@ -52,13 +52,17 @@ export function renderTime(date){
   let day = hour * 24; 
   let halfamonth = day * 15; 
   let month = day * 30; 
+  let yearC=diffValue/(month*12);
   let monthC =diffValue/month;   
   let weekC =diffValue/(7*day);   
   let dayC =diffValue/day;   
   let hourC =diffValue/hour;  
   let minC =diffValue/minute; 
-  let result=null;      
-  if(monthC>=1){    
+  let result=null;  
+  if(yearC>=1){
+    result=parseInt(yearC) + "年前";   
+  }
+  else if(monthC>=1){    
     result=parseInt(monthC) + "个月前";    
   }else if(weekC>=1){
     result=parseInt(weekC) + "个星期前";    

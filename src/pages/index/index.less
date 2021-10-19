@@ -12,7 +12,7 @@
     display: flex;
     flex-direction: row;
     align-items: flex-start;
-    width: 73%;
+    width: 90%;
     margin: 0.15rem auto;
 
     &:after {
@@ -29,16 +29,27 @@
     background-color: #fff;
     border-radius: 3px 3px 0 0;
 }
+
 .content_nav {
+    @media screen and (max-width:979px) {
+        font-size: 13px;
+        padding: 10px;
+    }
     display: flex;
     justify-content: flex-start;
     padding: 10px;
+    font-size: 14px;
+    background-color: #f6f6f6;
 
     li {
-        font-size: 14px;
+        @media screen and (max-width:979px) {
+        margin: 0 5px;
+        }
+        font-size: inherit;
         padding: 3px 4px;
         margin: 0 10px;
         color: #80bd01;
+
         &:hover {
             cursor: pointer;
         }
@@ -51,6 +62,49 @@
         transition: all .3s;
     }
 }
+
+.pageBar {
+    margin: 10px;
+
+    ul {
+        display: flex;
+
+        li {
+            font-size: 14px;
+            height: 20px;
+            width: 13px;
+            padding: 5px 12px;
+            border: 1px solid #ddd;
+            border-left: transparent;
+            cursor: pointer;
+            color: #778087;
+
+            &:first-child {
+                border-left: 1px solid #ddd;
+                border-radius: 5px 0 0 5px;
+            }
+            &:last-child{
+                border-radius:0 5px 5px 0;
+            }
+            &:hover {
+                background-color: #ddd;
+            }
+
+        }
+
+        .active {
+            color: #80bd01;
+            transition: all .2s;
+
+            &:hover{
+                background-color: #fff;
+                cursor: default;
+            }
+        }
+    }
+}
+
+
 
 .content_sidebar {
     @media screen and (max-width:979px) {

@@ -9,7 +9,7 @@
       <!-- 图标 -->
       <!-- 搜索框 -->
       <form id="search_form" class="navbar-search" action="/search">
-        <img src="../../../assets/images/search.png" alt="">
+        <img src="@/assets/images/search.png" alt="">
         <input type="text"  class="search-query span3" value="">
       </form>
       <!-- 搜索框 -->

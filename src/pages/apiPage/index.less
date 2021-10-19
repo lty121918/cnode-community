@@ -1,0 +1,123 @@
+  .api {
+        text-align: start;
+        font-size: 16px;
+        display: flex;
+        flex-direction: column;
+        width: 70%;
+        margin: 20px 20px 20px 100px;
+
+        @media screen and (max-width:979px) {
+            width: 100%;
+            margin: 10px 0;
+
+            pre {
+                overflow: auto;
+            }
+
+            a {
+                font-size: 12px;
+            }
+        }
+
+
+        .api_header {
+            padding: 10px;
+            background-color: #f6f6f6;
+            border-radius: 3px 3px 0 0;
+            border-bottom: 1px solid #ccc;
+            span {
+                display: inline-block;
+                padding: 0 5px;
+                font-size: 14px;
+                color: #999;
+            }
+            a{
+               color: #80bd01;
+            }
+        }
+
+        .markdown-text {
+            padding: 30px;
+            background-color: #fff;
+            margin-bottom: 20px;
+
+            p {
+                font-size: 17px;
+                margin-bottom: 15px;
+                font-weight: 400;
+            }
+
+            h3 {
+                font-size: 25px;
+            }
+
+            li {
+                margin: 10px;
+                margin-left: 30px;
+                list-style-type: disc;
+                color: #333;
+            }
+
+            h4 {
+                font-size: 17.5px;
+            }
+
+            a {
+                color: #0088cc;
+            }
+
+            code {
+                color: #000;
+                padding: 4px 6px;
+                background-color: #f7f7f7;
+              
+
+            }
+        }
+    }
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    padding-bottom: 8px;
+    font-weight: 700;
+    color: inherit;
+    margin-top: 30px;
+    margin-bottom: 15px;
+    border-bottom: 1px solid #ccc;
+}
+
+.prettyprint {
+    font-size: 14px;
+    border-width: 1px 0;
+    padding: 0 15px;
+    margin: 20px -10px;
+    border: none;
+    background-color: #f7f7f7;
+
+    code {
+        font-family: Monaco, Menlo, Consolas, "Courier New", monospace;
+        font-size: 13px;
+
+        span {
+            font-family: Monaco, Menlo, Consolas, "Courier New", monospace;
+        }
+
+        .pln {
+            color: #000;
+            font-size: inherit;
+            font-family: inherit;
+        }
+
+        .str {
+            color: #080;
+            font-size: inherit;
+            font-family: inherit;
+        }
+
+    }
+
+}

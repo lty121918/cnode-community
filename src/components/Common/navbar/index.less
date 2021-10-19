@@ -1,62 +1,59 @@
-.navbar{
-   width: 100%;
-   overflow: hidden;
-   background: #444;
-   .container{
-    @media screen and (max-width: 979px) {
-        margin: 0 auto;
-    }
-    width: 90%; 
-    margin: 0 auto;
-    text-align: center;
-    margin-bottom: 0.1rem;
-    &::after{
-        content: "";
-        display: block;
-        height: 0;
-        clear:both;
-        visibility: hidden;
+.navbar {
+    width: 100%;
+    overflow: hidden;
+    background: #444;
 
-    }
-        .brand{
+    .container {
+        @media screen and (max-width: 979px) {
+            margin: 0 auto;
+            align-items:center;
+        }
+
+        display: flex;
+        flex-wrap: wrap;
+        width: 90%;
+        margin: 0 auto;
+        text-align: center;
+        margin-bottom: 0.1rem;
+
+        .brand {
             @media screen and (max-width: 400px) {
-                float: none;
-                margin: 0 auto;
-                clear: both;
+                flex: 1;     
             }
             font-size: 0.16rem;
             display: block;
             width: 1rem;
-            float: left;
             padding: 0.03rem 0.1rem;
             height: 0.34rem;
-            margin: 0 auto;
-            img{
+
+            img {
                 width: 1.2rem;
                 height: 0.34rem;
                 line-height: 0.4rem;
             }
         }
-        .navbar-search{  //搜索盒子
+
+        .navbar-search {
+            //搜索盒子
             @media screen and (max-width: 400px) {
-                margin: 0 30px;
-                clear: both;
+                flex: 1;
             }
-            text-align: left;
-            line-height: 0.5rem;
+            display: flex;
             font-size: 0.16rem;
             margin-left: 0.06rem;
-            float: left;
-            height: 0.4rem;
-            img{
+            height: 0.25rem;
+            margin-top: 12px;
+
+            img {
                 position: relative;
-                left: 0.25rem;
-                top: 0.05rem;
+                height: 25px;
+                left: 0.3rem;
+                top: 0.01rem;
                 z-index: 10;
             }
-            .search-query{
+
+            .search-query {
                 font-size: 0.16rem;
-                position: relative;
                 border: none;
                 outline: none;
                 border-radius: 0.13rem;
@@ -64,36 +61,32 @@
                 color: #666;
                 background-color: #666;
                 padding: 0.05rem 0.15rem;
-                padding-left: 0.25rem;
-                &:focus{
-                    background-color:#fff;
+                padding-left: 0.3rem;
+
+                &:focus {
+                    background-color: #fff;
                 }
-                &:hover{
-                    background-color:#fff;
+
+                &:hover {
+                    background-color: #fff;
                 }
             }
 
         }
-        .pull-right{
-            @media screen and (max-width: 400px) {
-                clear: both;
-            }
-            @media screen and (min-width:400px) and (max-width:980px) { 
-                float:none;
-                clear: both;
-            }
+
+        .pull-right {
+
+            margin-left: auto;
             font-size: 0.13rem;
-            float: right;
             height: 0.4rem;
-            // line-height: 0.5rem;
-            li{
+            li {
                 float: left;
-                a{
+                a {
                     margin: 0 0.13rem;
-                    text-decoration: none;
                     color: #e1e1e1;
                     line-height: 0.5rem;
-                    &:hover{
+
+                    &:hover {
                         color: #fff;
                         transition: all .3s;
                     }
@@ -103,6 +96,6 @@
         }
 
 
-   }
+    }
 
 }

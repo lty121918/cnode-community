@@ -14,6 +14,17 @@
             <keep-alive>
                 <allNews :listData="listData"></allNews>
             </keep-alive>
+            <!-- 分页 start-->
+            <div class="pageBar">
+                <ul>
+                    <li @click="upPages()">«</li>
+                    <li v-if="page>1">...</li>
+                    <li v-for="index in allpages" :class="{active:index===page}" @click="clickPages(index)" v-if="((index<=page+2)&&(index>=page-2))||(page<3&&index<6)">{{index}}</li>
+                    <li v-if="page<9">...</li>
+                    <li @click="downPages()">»</li>
+                </ul>
+            </div>
+            <!-- 分页 start-->
         </div>
         <!-- 侧边内容 -->
         <div class="content_sidebar">
@@ -39,10 +50,12 @@ export default {
             currentTab: "all",
             listData: [],
             noReData: [],
+            page: 1,
+            allpages: 14,
         };
     },
     created() {
-        this.fetchListData({ limit: 45, tab: this.currentTab });
+        this.fetchListData({ limit: 45, tab: this.currentTab, page: 1 });
     },
 
     methods: {
@@ -72,9 +85,47 @@ export default {
                 default:
                     break;
             }
-            this.fetchListData({ limit: 45, tab: this.currentTab });
+            this.fetchListData({
+                limit: 45,
+                tab: this.currentTab,
+                page: this.page,
+            });
         },
 
+        // 分页切换
+        clickPages(index) {
+            // console.log(index);
+            this.page = index;
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+            this.fetchListData({
+                limit: 45,
+                tab: this.currentTab,
+                page: this.page,
+            });
+        },
+        //上一页
+        upPages() {
+            this.page = 1;
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+            this.fetchListData({
+                limit: 45,
+                tab: this.currentTab,
+                page: this.page,
+            });
+        },
+        //下一页
+        downPages() {
+            this.page = 14;
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+            this.fetchListData({
+                limit: 45,
+                tab: this.currentTab,
+                page: this.page,
+            });
+        },
         fetchListData(params) {
             request({
                 url: "topics",
@@ -89,7 +140,7 @@ export default {
                     this.noReData = this.listData.filter(
                         (v) => v.reply_count === 0
                     );
-                    // console.log(this.listData);
+                    console.log(res);
                 })
                 .catch((err) => {
                     console.log(err);
@@ -104,4 +155,6 @@ export default {
 };
 </script>
 
-<style lang="less" scoped src="./index.less"></style>
+<style lang="less" scoped>
+    @import "./index.less";
+</style>
