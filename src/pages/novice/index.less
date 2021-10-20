@@ -1,0 +1,70 @@
+.novice {
+    @media screen and (max-width:979px) {
+        margin: 20px 0;
+        width: 100%;
+    }
+
+    display: flex;
+    flex-direction: row;
+    font-size: 16px;
+    text-align: left;
+    width: 80%;
+    margin: 20px auto;
+
+    // 左边内容
+    .nov_content {
+        flex: 1;
+        background-color: #fff;
+        font-family: "Helvetica Neue","Luxi Sans","DejaVu Sans",Tahoma,"Hiragino Sans GB",STHeiti,sans-serif!important;
+        .nov_content_header {
+            padding: 10px;
+            background-color: #f6f6f6;
+            border-radius: 3px 3px 0 0;
+            border-bottom: 1px solid #f6f6f6;
+
+            span {
+                display: inline-block;
+                padding: 0 5px;
+                font-size: 14px;
+                color: #999;
+            }
+            a {
+                color: #80bd01;
+            }
+        }
+        .nov_content_main{
+            padding: 15px;
+            h2{
+                font-size: 26px;
+                border-bottom: 1px solid #ccc;
+                margin-top: 30px;
+                padding: 10px;
+                margin-bottom: 15px;
+                &:first-child{
+                    margin-top: 10px;
+                }
+            }
+            a{
+                color: #08c;
+                font-size: 15px;
+                margin: 10px 0;
+            }
+            p{
+                margin: 15px 0;
+                font-size: 15px;
+            }
+        }
+
+
+    }
+
+    // 侧边栏内容
+    .nov_sidebar {
+        @media screen and (max-width:979px) {
+            display: none;
+        }
+        width: 290px;
+        height: 660px;
+        margin-left: 15px;
+    }
+}

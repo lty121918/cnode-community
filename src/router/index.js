@@ -13,17 +13,18 @@ const routes = [{
   },
   {
     path: '/topic',
+    name:'Topic',
     component: () => import("../pages/index/index.vue")
   },
   {
     path: '/topic/:id', //动态路由
-    name: 'detail',
+    name: 'Detail',
     component: () => import('../pages/detail/index.vue'),
     props: true //开启props传参，把id传到子组件中去
   },
   {
     path: '/user/:loginname', //动态路由
-    name: 'user',
+    name: 'User',
     component: () => import('../pages/userDetail/index.vue'),
     props: true //开启props传参，把id传到子组件中去
   },
@@ -36,6 +37,16 @@ const routes = [{
     path: '/api',
     name: 'Api',
     component: () => import('../pages/apiPage/index.vue')
+  },
+  {
+    path: '/novice',
+    name: 'Novice',
+    component: () => import('../pages/novice/index.vue')
+  },
+  {
+    path: '/about',
+    name: 'About',
+    component: () => import('../pages/about/index.vue')
   },
 
 ]

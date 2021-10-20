@@ -28,22 +28,22 @@
         </div>
         <!-- 侧边内容 -->
         <div class="content_sidebar">
-            <asidebar></asidebar>
+            <unlogin></unlogin>
+            <noreply></noreply>
+            <about-link></about-link>
         </div>
     </div>
 </template>
 
 <script>
-// import aheader from "./header/index.vue"
-import asidebar from "./sidebar/index.vue";
+import noreply from "../../components/Common/noreply/index.vue";
+import unlogin from "@/components/Common/unlogin/index.vue";
+import aboutLink from "@/components/Common/aboutLink/index.vue";
 import allNews from "./allNews/index.vue";
 import { request } from "@/network/request/request";
 import { selfScrollTo, renderTime, getDateDiff } from "@/utils/utils";
 
 export default {
-    components: {
-        allNews,
-    },
     data() {
         return {
             Index: 1,
@@ -94,7 +94,6 @@ export default {
 
         // 分页切换
         clickPages(index) {
-            // console.log(index);
             this.page = index;
             document.body.scrollTop = 0;
             document.documentElement.scrollTop = 0;
@@ -149,8 +148,10 @@ export default {
     },
 
     components: {
-        asidebar,
         allNews,
+        noreply,
+        unlogin,
+        aboutLink
     },
 };
 </script>

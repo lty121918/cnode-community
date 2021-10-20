@@ -16,7 +16,7 @@
       <!-- 右侧导航栏 -->
       <ul class="nav pull-right">
         <li><a href="/">首页</a></li>
-        <li><a href="/getstart">新手入门</a></li>
+        <li><a href="/novice">新手入门</a></li>
         <li><a href="/api">API</a></li>
         <li><a href="/about">关于</a></li>
         <li><a href="/signup">注册</a></li>
