@@ -81,7 +81,6 @@ mounted(){
           this.reply = res.data.data.replies.map(v => Object.assign(v, {create_at: getDateDiff(renderTime(v.create_at))}));
 
           this.loginname=res.data.data.author.loginname;
-          // console.log(JSON.stringify(this.loginname)); 
               request({
                   url:`user/${this.loginname}`,
                   }).then(res=>{

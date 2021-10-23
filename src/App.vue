@@ -23,10 +23,8 @@ export default {
 
 
 <style lang="less">
- body{
+body {
     background-color: #e1e1e1;
     text-align: center;
-    
-  }
-
+}
 </style>

@@ -57,7 +57,6 @@ export default {
     created() {
         this.fetchListData({ limit: 45, tab: this.currentTab, page: 1 });
     },
-
     methods: {
         //nav栏切换
         changeNav(index) {
@@ -139,23 +138,22 @@ export default {
                     this.noReData = this.listData.filter(
                         (v) => v.reply_count === 0
                     );
-                    console.log(res);
+                    // console.log(res);
                 })
                 .catch((err) => {
                     console.log(err);
                 });
         },
     },
-
     components: {
         allNews,
         noreply,
         unlogin,
-        aboutLink
+        aboutLink,
     },
 };
 </script>
 
 <style lang="less" scoped>
-    @import "./index.less";
+@import "./index.less";
 </style>

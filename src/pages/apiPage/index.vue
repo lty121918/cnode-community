@@ -5,7 +5,7 @@
                 <router-link to="/topic">主页</router-link>
             </span>
             <span>/</span>
-            <span>API</span>
+            <span @click="handleClick()">API</span>
         </header>
         <div class="markdown-text">
             <p>以下 api 路径均以 <strong><a href="https://cnodejs.org/api/v1" target="_blank">https://cnodejs.org/api/v1</a></strong> 为前缀</p>
@@ -169,9 +169,15 @@
 </template>
 
 <script>
-export default {};
+export default {
+    methods: {
+        handleClick() {
+            this.$toast();
+        },
+    },
+};
 </script>
 
 <style lang="less" scoped>
-    @import "./index.less";
+@import "./index.less";
 </style>

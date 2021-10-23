@@ -1,159 +1,194 @@
 .userDetial {
     font-size: 16px;
+
     @media screen and (max-width:979px) {
         width: 98%;
     }
+
     width: 90%;
     margin: 15px auto;
     display: flex;
+
     /////////////////////////////////////
     .user_innner {
         flex: 1;
         width: 100%;
-     ////////////////////////////////////   
-        .user_main{      //第一个盒子
+
+        ////////////////////////////////////   
+        .user_main {
+            //第一个盒子
             background-color: #fff;
-            .user_header{
+
+            .user_header {
                 padding: 0.1rem;
                 height: 20px;
                 text-align: left;
                 background-color: #f6f6f6;
-                a{
+
+                a {
                     font-size: 14px;
                     color: #80bd01;
                 }
-            }  
+            }
         }
-        .user_main_inner{
+
+        .user_main_inner {
             text-align: left;
             padding: 10px;
-            img{
+
+            img {
                 width: 40px;
                 height: 40px;
             }
-            .author_loginname{
-                    color: #778087;
-                    font-size: 14px;
+
+            .author_loginname {
+                color: #778087;
+                font-size: 14px;
+            }
+
+            ul {
+                font-size: 14px;
+
+                li {
+                    color: #333;
+                    font-size: inherit;
+                    margin-bottom: 10px;
                 }
-            .author_score{
-                display: inline-block;
+
+                .author_score {
+                    display: inline-block;
                     background-color: #80bd01;
                 }
             }
+
+
         }
+    }
+
     ///////////////////////////////////////////
-        .user_create{  //第二个盒子
-            background-color: #fff;
-            width: 100%;
-            margin-top: 10px;
-            ul{
-                padding: 10px;
-                li{
-                    display: flex;
-                    align-items: center;
-                    justify-content: flex-start;
-                    flex-direction: row;
-                    width: 95%;
-                    padding: 0.1rem 0.1rem;
-                    border-bottom: 1px solid #e1e1e1;
-                    img{
-                        width: 30px;
-                        height: 30px;
-                        margin-right: 10px;
+    .user_create {
+        //第二个盒子
+        background-color: #fff;
+        width: 100%;
+        margin-top: 10px;
+
+        ul {
+            padding: 10px;
+
+            li {
+                display: flex;
+                align-items: center;
+                justify-content: flex-start;
+                flex-direction: row;
+                width: 95%;
+                padding: 0.1rem 0.1rem;
+                border-bottom: 1px solid #e1e1e1;
+
+                img {
+                    width: 30px;
+                    height: 30px;
+                    margin-right: 10px;
+                }
+
+                .count {
+                    @media screen and (max-width:980px) {
+                        position: absolute;
+                        top: 26px;
+                        left: 80px;
+                        font-size: 10px;
+                        text-align: start;
                     }
-                    // .putTop{  //绿色框框,置顶和精华
-                    //     min-width:30px;
-                    //     height: 18px;
-                    //     margin-left: 0.02rem;
-                    //     float: left;
-                    //     font-size: 0.12rem;
-                    //     color: azure;
-                    //     width: 32px;
-                    //     border-radius: 0.03rem;
-                    //     background-color:#80bd01;
-                    // }
-                    .count{
-                        @media screen and (max-width:980px) { 
-                            position: absolute; 
-                            top: 26px;
-                            left: 80px;
-                            font-size: 10px;
-                            text-align: start;
-                        }
-                        position: relative;
-                        height: 0.3rem;
-                        width: 0.7rem;
-                        text-align: center;
-                        font-size: 0.01rem;
-                        margin-right: 0.02rem;
-                        span{
-                            font-size: 0.14rem;
-                            line-height: 0.35rem; 
-                        }
-                        .one{
-                            font-size: 0.14rem;
-                            color: #9e78c0;
-                            margin-left: 0.05rem;
-                        }
-                        .two{
-                            color: #B4B4B4;
-                            font-size: 0.12rem;
-                        }
+
+                    position: relative;
+                    height: 0.3rem;
+                    width: 0.7rem;
+                    text-align: center;
+                    font-size: 0.01rem;
+                    margin-right: 0.02rem;
+
+                    span {
+                        font-size: 0.14rem;
+                        line-height: 0.35rem;
                     }
-                    p{
-                        margin: 0 0.1rem;
-                        a{
-                        color: #0088cc;
-                        }
+
+                    .one {
+                        font-size: 0.14rem;
+                        color: #9e78c0;
+                        margin-left: 0.05rem;
                     }
-                    .create_at{
-                        flex: 1;
-                        text-align: right;
-                        color: #778087;
-                        margin-right: 0.05rem;
+
+                    .two {
+                        color: #B4B4B4;
                         font-size: 0.12rem;
-                        min-width: 40px;
                     }
                 }
-                .dark{
-                    color: #666666;
-                    font-size: 14px;
+
+                p {
+                    margin: 0 0.1rem;
+
+                    a {
+                        color: #0088cc;
+                        font-size: 15px;
+                    }
+                }
+
+                .create_at {
+                    flex: 1;
+                    text-align: right;
+                    color: #778087;
+                    margin-right: 0.05rem;
+                    font-size: 0.12rem;
+                    min-width: 40px;
                 }
             }
 
+            .dark {
+                color: #666666;
+                font-size: 14px;
+            }
         }
+
+    }
+
     ///////////////////////////////////////////
     .user_sidebar {
         @media screen and (max-width:979px) {
             display: none;
         }
+
         // background-color: red;
         flex-basis: 290px;
         margin-left: 15px;
-        .user_sidebar_panel{
+
+        .user_sidebar_panel {
             background-color: #fff;
             margin-bottom: 15px;
-          .inner{
-              padding: 20px 20px;
-              img{
-              width: 90%;
-              height: 90%;
-              }
-          }
-        .two{
-            padding: 5px 20px;
-            padding-bottom: 10px;
-            text-align: left;
-            img{
-                width: 150px;
-                margin: 3px 0;
+
+            .inner {
+                padding: 20px 20px;
+
+                img {
+                    width: 90%;
+                    height: 90%;
+                }
             }
-        }
+
+            .two {
+                padding: 5px 20px;
+                padding-bottom: 10px;
+                text-align: left;
+
+                img {
+                    width: 150px;
+                    margin: 3px 0;
+                }
+            }
         }
     }
 }
 
-.user_header{   //经常复用的公共头
+.user_header {
+    //经常复用的公共头
     padding: 0.1rem;
     height: 20px;
     font-size: 13px;
